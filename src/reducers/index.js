@@ -6,6 +6,7 @@ import eduReducer from './eduReducer'
 import expReducer from './expReducer'
 import skillsReducer from './skillsReducer'
 import contactReducer from './contactReducer'
+import loadingReducer from './loadingReducer'
 
 export default combineReducers ({
     form : formReducer,
@@ -14,5 +15,6 @@ export default combineReducers ({
     edu : eduReducer,
     exp : expReducer,
     skills : skillsReducer,
-    contact : contactReducer
+    contact : contactReducer,
+    loading : loadingReducer
 })

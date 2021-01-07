@@ -11,6 +11,7 @@ export const skillCreate = formValues => async(dispatch,getState) =>{
 export const fetchSkills = () => async dispatch =>{
     const res = await informations.get('/skills')
     dispatch({type : FETCH_SKILLS , payload : res.data})
+    dispatch({type: 'HIDE_LOADER'})
 }
 export const fetchSkill = (id) => async dispatch =>{
     const res = await informations.get(`/skills/${id}`)

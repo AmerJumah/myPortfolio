@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import {fetchExps} from '../../../actions/expActions'
 import {googleCredit} from '../../../credentials'
 import ReactHtmlParser from 'react-html-parser'
+import Loader from '../Loader'
 
 class Experience extends React.Component {
     componentDidMount(){
@@ -63,6 +64,7 @@ class Experience extends React.Component {
         return (
             <div>
                 <h3>My Experience</h3>
+                <Loader/>
                 <div className="ui celled list">
                     {this.renderExp()}
                 </div>

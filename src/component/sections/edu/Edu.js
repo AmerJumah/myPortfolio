@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {fetchEdus} from '../../../actions/eduActions'
 import {googleCredit} from '../../../credentials'
+import Loader from '../Loader'
 
 class Edu extends React.Component {
     componentDidMount(){
@@ -60,7 +61,8 @@ class Edu extends React.Component {
     render (){
         return (
             <div>
-                <h3>Education & Courses</h3>
+                <h3 id='edu'>Education & Courses</h3>
+                <Loader />
                 <div className="ui celled list">
                     {this.renderEdu()}
                 </div>

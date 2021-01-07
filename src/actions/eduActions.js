@@ -12,6 +12,7 @@ export const eduCreate = formValues => async(dispatch,getState) =>{
 export const fetchEdus = () => async dispatch =>{
     const res = await informations.get('/education')
     dispatch({type : FETCH_EDUS , payload : res.data})
+    dispatch({type: 'HIDE_LOADER'})
 }
 export const fetchEdu = (id) => async dispatch =>{
     const res = await informations.get(`/education/${id}`)

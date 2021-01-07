@@ -18,7 +18,7 @@ class Contact extends Component {
     renderInput=({input,label,meta})=>{
         const className = `field ${meta.error && meta.touched ? 'error' : ''}`;
         return (
-            <div className={className}>
+            <div className={className} >
                 <label>{label}</label>
                 <input {...input} autoComplete='off'/>
                 {this.renderError(meta)}
@@ -46,9 +46,11 @@ class Contact extends Component {
     render() {
         
         return (
-            <>
-                <h2>Wanna work with me...</h2>
-                <div className="ui divider"></div>
+            <section style={{margin : '3em 0'}}>
+                <div className='title'>
+                  <h1 className='ui header centered' style={{fontSize:'4em', color:'#202726'}} id='contact'>Wanna work with me...</h1>
+                </div>
+                
                 <form onSubmit={this.props.handleSubmit(this.onSubmit)} className='ui form error'>
                   <Field name='name' component={this.renderInput} label='Your Name'/> 
                   <Field name='email' component={this.renderInput} label='Email' /> 
@@ -56,7 +58,7 @@ class Contact extends Component {
                   <Field name='query' component={this.renderTextarea} label='Your Query' /> 
                   <button className='ui button primary'>Send</button>
                 </form>
-            </>
+            </section>
         )
     }
 }

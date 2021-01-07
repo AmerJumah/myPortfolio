@@ -1,19 +1,30 @@
-import React from 'react'
+import React, {useState} from 'react'
+
+
 
 const Card = props => {
-    console.log(props);
+const [isShown, setIsShown] =  useState(false)
+
     return (
-        <div className="ui card">
-            <div className="image">
-                <img src={props.img} alt='services'/>
-            </div>
-            <div className="content">
-                <div className="header">{props.title}</div>
-                <div className="meta">
-                    <div>{props.content}</div>
-                </div>
-            </div>
+
+        <div className="card" 
+            onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}
+        >
+        <div className={`ui ${isShown ? 'active' : 'disabled'} inverted dimmer`}>
+            <div style={{lineHeight:'25px', fontWeight:'bold'}}>{props.desc}</div>
         </div>
+            <div className="image">
+                <img src={`/images/${props.image}`} alt={props.alt}/>
+            </div>
+            
+            
+            <div className="content">
+                <p className="header center aligned">{props.title}</p>
+            </div>
+            
+        </div>
+        
     )
 }
 

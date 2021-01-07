@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {fetchSkills} from '../../../actions/skillsActions'
 import {googleCredit} from '../../../credentials'
+import Loader from '../Loader'
 
 class Skills extends React.Component {
     componentDidMount(){
@@ -61,6 +62,7 @@ class Skills extends React.Component {
         return (
             <div>
                 <h3>Skills</h3>
+                <Loader />
                 <div className="ui celled list">
                     {this.renderSkill()}
                 </div>

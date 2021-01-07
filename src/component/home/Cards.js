@@ -1,33 +1,42 @@
 import React from 'react'
 import Card from './Card'
-import './home.css'
+
 
 
 const Cards =()=> {
     return (
-        <div className="__cards ui link cards">
-            <Card
-                img = "/images/it.jpg" 
-                title = "IT Support"
-                content = "More than 10 years experience in full end-user support"
-            /> 
-            <Card
-                img = "/images/mern.jpg" 
-                title = "Web Developer"
-                content = "Developing your website with most modern and powerfull programming Languages"
-            /> 
-            <Card
-                img = "/images/o365.jpg" 
-                title = "Mcrosoft Office 365 Expert"
-                content = "Implementing Exchange Sharepoint OneDrive Teams to enhance your business"
-            /> 
-            <Card
-                img = "/images/Odoo.jpg" 
-                title = "Odoo Expert"
-                content = "Implementing all you need to get started Odoo ERP system"
-            /> 
+        <section style={{margin : '3em 0'}}>
             
-        </div>
+            <h1 className='ui header centered' style={{fontSize:'4em', color:'#202726'}} id='services'>My Services</h1>
+            
+            <div className="ui four doubling stackable cards">
+                <Card 
+                    image='mern.jpg'
+                    title='Web Development'
+                    alt='Web Development'
+                    desc='Developing websites with modern languages'
+                />
+                <Card 
+                    image='o365.jpg'
+                    title='Office 365'
+                    alt='Office 365'
+                    desc='transfer your office work to the next level of proffciency with Office 365'
+                />
+                <Card 
+                    image='Odoo.jpg'
+                    title='Odoo ERP'
+                    alt='Odoo ERP'
+                    desc='implementing Odoo ERP System'
+                />
+                <Card 
+                    image='it.jpg'
+                    title='IT Support'
+                    alt='IT Support'
+                    desc='Full IT end-user Support'
+                />
+                
+            </div>
+        </section>
     ) 
 }   
     

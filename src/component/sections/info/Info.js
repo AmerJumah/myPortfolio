@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {fetchInfos} from '../../../actions/infoActions'
 import {googleCredit} from '../../../credentials'
+import Loader from '../Loader'
 
 
 
@@ -56,7 +57,8 @@ class Info extends React.Component {
 
         return (
             <div>
-               <h2>Personal Information</h2>
+               <h2 id='info'>Personal Information</h2>
+               <Loader/>
                 <div className="ui celled list">
                     {this.renderInfo()}
                 </div>

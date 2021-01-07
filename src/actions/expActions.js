@@ -11,6 +11,7 @@ export const expCreate = formValues => async(dispatch,getState) =>{
 export const fetchExps = () => async dispatch =>{
     const res = await informations.get('/experience')
     dispatch({type : FETCH_EXPS , payload : res.data})
+    dispatch({type: 'HIDE_LOADER'})
 }
 export const fetchExp = (id) => async dispatch =>{
     const res = await informations.get(`/experience/${id}`)

@@ -13,6 +13,7 @@ export const fetchInfos = () => async dispatch => {
     const res = await informations.get('/informations');
     
     dispatch({ type: FETCH_INFOS, payload: res.data });
+    dispatch({type: 'HIDE_LOADER'})
 };
 
 export const fetchInfo = id => async dispatch => {

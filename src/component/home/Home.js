@@ -3,6 +3,8 @@ import Cards from './Cards'
 import Contact from './contact/Contact'
 import Hero from './Hero'
 
+
+
 const Home = () => {
     return (
         <>
